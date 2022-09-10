@@ -1,7 +1,14 @@
-let sortedRows = Array.from(table.rows)
-    .slice(1)
-    .sort((rowsA, rowsB) => {
-        return rowsA.cells[1].innerHTML - rowsB.cells[1].innerHTML;
-    });
+function upDate() {
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
 
-table.tBodies[0].append(...sortedRows);
+    if (hours < 10) hours = '0' + hours;
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(upDate, 1000);
