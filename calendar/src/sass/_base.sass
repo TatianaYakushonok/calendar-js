@@ -13,7 +13,9 @@ body
     font-size: 1.6rem
     line-height: 2.5rem
     color: #333
-    background: url(../img/autumn_large_2400.jpg) center/cover no-repeat
+    background: url(../img/autumn_medium_1920.jpg) center/cover no-repeat
+    @media ( min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
+        background: url(../img/autumn_large_2400.jpg) center/cover no-repeat
 
 .container,
 .header__container
@@ -54,5 +56,5 @@ td
     background-color: rgba(255, 255, 255, .8)
     transition: background-color .4s ease
     &:hover
-        background-color: #3fa
+        background-color: #fafd45
         cursor: pointer
